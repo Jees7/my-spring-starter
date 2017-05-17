@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="FirstSpring:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="firstspring-1.0.0-BUILD-SNAPSHOT.war">
-      <element id="artifact" artifact-name="FirstSpring:war exploded" />
-    </root>
-  </artifact>
-</component>
