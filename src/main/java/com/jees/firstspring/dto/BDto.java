@@ -15,7 +15,7 @@ public class BDto {
     private int bStep;
     private int bIndent;
 
-    public BDto() {
+    public BDto(String bTitle, String bContext, Timestamp bDate, int bHit) {
     }
 
     public BDto(int bId, String bName, String bTitle, String bContent, Timestamp bData, int bHit, int bGroup, int bStep, int bIndent) {

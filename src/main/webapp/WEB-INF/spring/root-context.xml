@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns="http://www.springframework.org/schema/beans"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-		
+
+	<!-- DataSource configuration for MariaDB -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="org.mariadb.jdbc.Driver"/>
+		<property name="url" value="jdbc:mariadb://localhost:3306/unnamed"/>
+		<property name="username" value="root"/>
+		<property name="password" value="soccerf2"/>
+	</bean>
+
+	<!-- BDao -->
+	<bean id="BDao" class="com.jees.firstspring.dao.BDao">
+		<constructor-arg ref="dataSource"/>
+	</bean>
+
 </beans>

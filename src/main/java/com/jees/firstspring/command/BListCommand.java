@@ -12,7 +12,8 @@ public class BListCommand implements BCommand {
     public void execute(Model model) {
         BDao dao = new BDao();
 
-        ArrayList<BDto> dtos = dao.list();
+        String name = "Jees";
+        ArrayList<BDto> dtos = dao.list(name);
 
         model.addAttribute("list", dtos);
     }
